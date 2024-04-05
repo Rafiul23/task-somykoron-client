@@ -19,7 +19,7 @@ const OurUsers = () => {
                 title='Our Users'
             ></SectionTitle>
 
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4 py-6">
                 {
                     users.slice(0, 4).map(user => <UserCard
                     key={user._id}
