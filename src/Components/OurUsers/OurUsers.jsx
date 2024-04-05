@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../SectionTitile/SectionTitle";
 import UserCard from "../UserCard/UserCard";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 
 
 const OurUsers = () => {
@@ -26,6 +28,13 @@ const OurUsers = () => {
                     user={user}
                     ></UserCard>)
                 }
+            </div>
+            <div className="text-center my-5">
+                <Link to='/users'>
+                <Button
+                title='See All Users'
+                ></Button>
+                </Link>
             </div>
         </div>
     );
