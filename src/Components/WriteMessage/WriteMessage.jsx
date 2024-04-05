@@ -56,7 +56,7 @@ const WriteMessage = () => {
             <div>
 
 
-                <div className="bg-base-200 w-1/2 my-5 mx-auto p-4">
+                <div className="bg-base-200 lg:w-1/2 md:w-3/4 w-full my-5 mx-auto p-4">
                     <form onSubmit={handleMessages}>
                         <h2 className="text-blue-900 font-bold text-3xl ">Your Name: </h2>
                         <input type="text" placeholder="Your Name" name="name" className="border p-4 block my-4 w-full" required />

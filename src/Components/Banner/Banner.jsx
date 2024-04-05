@@ -6,7 +6,7 @@ import SectionTitle from '../SectionTitile/SectionTitle';
 const Banner = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+            <div className="hero-content flex-col md:flex-row">
                 <img src={user} className="md:w-1/2 w-full rounded-lg shadow-2xl" />
                 <div className='md:w-1/2 w-full'>
                     <SectionTitle
