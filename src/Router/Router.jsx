@@ -1,3 +1,4 @@
+import Home from '../Components/Home/Home';
 import Root from './../Root/Root';
 import {
     createBrowserRouter
@@ -9,7 +10,8 @@ const router = createBrowserRouter([
       element: <Root></Root>,
       children: [
         {
-            
+            path: '/',
+            element: <Home></Home>
         }
       ]
     },
