@@ -1,5 +1,6 @@
 import Home from '../Components/Home/Home';
 import Users from '../Components/Users/Users';
+import WriteMessage from '../Components/WriteMessage/WriteMessage';
 import Root from './../Root/Root';
 import {
     createBrowserRouter
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
         {
             path: '/users',
             element: <Users></Users>
+        },
+        {
+            path: '/addmessage',
+            element: <WriteMessage></WriteMessage>
         }
       ]
     },
