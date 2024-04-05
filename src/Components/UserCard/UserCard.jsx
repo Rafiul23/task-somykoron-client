@@ -7,13 +7,13 @@ const UserCard = ({ user }) => {
     return (
 
         <motion.div 
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{
-            delay: 0.3,
+            delay: 0.4,
             x: { type: 'spring', stiffness: 60 },
             opacity: { duration: 1 },
-            ease: 'easeIn',
+            ease: "circIn",
             duration: 1
         }}
         className="card bg-base-200">
