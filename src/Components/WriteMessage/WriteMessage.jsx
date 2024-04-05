@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import SectionTitle from "../SectionTitile/SectionTitle";
 import { MessageContext } from "../MessageProvider/MessageProvider";
 import Swal from 'sweetalert2'
+import {motion} from 'framer-motion';
 
 const WriteMessage = () => {
 
@@ -56,7 +57,17 @@ const WriteMessage = () => {
             <div>
 
 
-                <div className="bg-base-200 lg:w-1/2 md:w-3/4 w-full my-5 mx-auto p-4">
+                <motion.div 
+                 initial={{ x: -50, y:-50, opacity: 0 }}
+                 whileInView={{ x: 0, y:0, opacity: 1 }}
+                 transition={{
+                     delay: 0.3,
+                     x: { type: 'spring', stiffness: 60 },
+                     opacity: { duration: 1 },
+                     ease: 'easeIn',
+                     duration: 1
+                 }}
+                className="bg-base-200 lg:w-1/2 md:w-3/4 w-full my-5 mx-auto p-4">
                     <form onSubmit={handleMessages}>
                         <h2 className="text-blue-900 font-bold text-3xl ">Your Name: </h2>
                         <input type="text" placeholder="Your Name" name="name" className="border p-4 block my-4 w-full" required />
@@ -68,7 +79,7 @@ const WriteMessage = () => {
                             title='Submit'
                         ></Button>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

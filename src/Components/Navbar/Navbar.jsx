@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     return (
@@ -21,10 +21,30 @@ const Navbar = () => {
                         <li><NavLink to='/addmessage'>Write Message</NavLink></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Message Plus</a>
+                <motion.h1 
+                 initial={{ x: -50, opacity: 0 }}
+                 whileInView={{ x: 0, opacity: 1 }}
+                 transition={{
+                     delay: 0.3,
+                     x: { type: 'spring', stiffness: 60 },
+                     opacity: { duration: 1 },
+                     ease: 'easeIn',
+                     duration: 1
+                 }}
+                className="font-bold text-xl">Message Plus</motion.h1>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <motion.ul 
+                 initial={{ x: -50, opacity: 0 }}
+                 whileInView={{ x: 0, opacity: 1 }}
+                 transition={{
+                     delay: 0.3,
+                     x: { type: 'spring', stiffness: 60 },
+                     opacity: { duration: 1 },
+                     ease: 'easeIn',
+                     duration: 1
+                 }}
+                className="menu menu-horizontal px-1">
                     <li><NavLink to='/'>Home</NavLink></li>
                     <li>
                         <details>
@@ -36,7 +56,7 @@ const Navbar = () => {
                         </details>
                     </li>
                     <li><NavLink to='/addmessage'>Write Message</NavLink></li>
-                </ul>
+                </motion.ul>
             </div>
             <div className="navbar-end">
                 
