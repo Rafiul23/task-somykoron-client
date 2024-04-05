@@ -8,10 +8,32 @@ const WriteMessage = () => {
 
     const { messages, setMessages } = useContext(MessageContext);
 
+
+
+    function generateUniqueNumber() {
+        const timestamp = Date.now();
+        const random = Math.floor(Math.random() * 1000);
+        return timestamp.toString() + random.toString();
+    }
+
+    const _id = generateUniqueNumber();
+
     const handleMessages = e => {
         e.preventDefault();
         const name = e.target.name.value;
         const message = e.target.message.value;
+
+        const messageData = {
+            _id,
+            name,
+            message
+        };
+
+        console.log(messageData);
+
+        setMessages([...messages, messageData]);
+
+        console.log(messages);
 
         e.target.name.value = '';
         e.target.message.value = '';
@@ -22,7 +44,7 @@ const WriteMessage = () => {
             title: "Your message has been saved",
             showConfirmButton: false,
             timer: 1500
-          });
+        });
     }
 
     return (

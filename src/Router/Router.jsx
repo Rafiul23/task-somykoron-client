@@ -1,4 +1,5 @@
 import Home from '../Components/Home/Home';
+import ShowMessages from '../Components/ShowMessages/ShowMessages';
 import Users from '../Components/Users/Users';
 import WriteMessage from '../Components/WriteMessage/WriteMessage';
 import Root from './../Root/Root';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         {
             path: '/addmessage',
             element: <WriteMessage></WriteMessage>
+        },
+        {
+            path: '/messages',
+            element: <ShowMessages></ShowMessages>
         }
       ]
     },
