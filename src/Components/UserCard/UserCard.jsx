@@ -1,10 +1,11 @@
-import React from 'react';
+
 
 const UserCard = ({ user }) => {
 
     const { image, name, address, profession } = user;
 
     return (
+
         <div className="card bg-base-200">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
