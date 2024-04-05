@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { MessageContext } from './../MessageProvider/MessageProvider';
-import Button from './../Button/Button';
 import SectionTitle from './../SectionTitile/SectionTitle';
+import MessageCard from "../MessageCard/MessageCard";
 
 
 const ShowMessages = () => {
 
-    const { messages, setMessages } = useContext(MessageContext);
+    const { messages } = useContext(MessageContext);
 
     
     return (
@@ -15,22 +15,14 @@ const ShowMessages = () => {
             title='All Messages'
             >
             </SectionTitle>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 gap-4 my-5">
             {
-                messages.map(message =>
-                    <div className="my-4" key={message._id}>
-                        <div className="card w-full bg-base-200 shadow-lg">
-                            <div className="card-body">
-                                <h2 className="card-title">{message.name}</h2>
-                                <p>{message.message}</p>
-                                <div className="card-actions justify-end">
-                                    <Button
-                                        title='Delete Message'
-                                    ></Button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>)
+                messages.map(messageData =>
+                <MessageCard
+                messageData={messageData}
+                key={messageData._id}
+                ></MessageCard>    
+                )
             }
         </div>
         </div>
